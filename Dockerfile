@@ -9,3 +9,5 @@ RUN sudo apt-get update  && \
 	sudo dpkg --ignore-depends kicad -i interactivehtmlbom*.deb && \
 	sudo rm /*.deb  && \
 	sudo rm -rf /var/lib/apt/lists/* /var/cache/debconf/templates.dat-old /var/lib/dpkg/status-old
+
+USER root
