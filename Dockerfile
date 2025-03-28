@@ -4,7 +4,7 @@ FROM ghcr.io/kicad/kicad:9.0
 ADD dl_deb.py /usr/bin/
 RUN sudo apt-get update  && \
 	sudo apt install -y bsdmainutils && \
-	sudo apt install -y python3-requests && \
+	sudo apt install -y python3-requests python3-socks && \
 	sudo python3 /usr/bin/dl_deb.py INTI-CMNB/InteractiveHtmlBom && \
 	sudo dpkg --ignore-depends kicad -i interactivehtmlbom*.deb && \
 	sudo rm /*.deb  && \
